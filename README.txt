@@ -1,32 +1,92 @@
-# Cypress Project 
 
-## Description
+# nextbasket - Cypress Test Automation
 
-This project is a test automation suite using Cypress to ensure the accuracy, reliability, and performance of a web application.
+This repository contains the test automation framework for the nextbasket Web app project, built using Cypress in JavaScript. The framework is designed to automate end-to-end testing scenarios, ensuring the reliability and stability of the application.
 
-## Technologies
+## Project Structure
 
-- **Cypress**: End-to-end testing framework
-- **JavaScript**: Programming language
-- **Mocha**: Test framework
-- **Chai**: Assertion library
-- **Node.js**: JavaScript runtime
-- **NPM**: Package manager
+```
+nextbasket/
+├── cypress/
+│   ├── e2e/                # Test specifications
+│   ├── fixtures/           # Test data
+│   ├── pageObjects/        # Page Object Modal implemented
+│   ├── support/            # Custom commands and helpers
+├── node_modules/           # Project dependencies
+├── cypress.config.js       # Cypress configuration file
+├── package.json            # Project metadata and dependencies
+├── README.md               # Project documentation
+```
 
+## Getting Started
 
-## Installation
+### Prerequisites
 
-# Clone the repository:
+Ensure the following software is installed on your machine:
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-   git clone https://github.com/waqas9462/NextBasketTesting.git
-   cd cypress-project
+### Installation
 
-# Install dependencies: npm install
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd nextbasket
+   ```
 
-# Run all tests: npx cypress run
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-# Open Cypress Test Runner: npx cypress open
+### Running Tests
 
-# Executes test cases in run mode (headed mode): npx cypress run --headed --browser chrome --spec .
+#### Open Cypress Test Runner
+```bash
+npx cypress open
+```
 
-# Executes test cases in run mode (headedless mode): npx cypress run --browser chrome --spec .
+#### Run Tests in Headless Mode
+```bash
+npx cypress run
+```
+```
+## Configuration
+
+Customize your project settings in `cypress.config.js`. For example:
+
+```javascript
+module.exports = {
+    e2e: {
+        baseUrl: 'https://www-dev2.nextbasket.com"', 
+        viewportWidth: 1280,
+        viewportHeight: 720,
+    },
+};
+```
+
+## Folder Structure Details
+
+- **e2e/**: Contains test case files grouped by feature or module.
+- **fixtures/**: Stores static data files (e.g., JSON).
+- **support/**: Includes reusable custom commands or utilities.
+
+## Reporting
+
+Test results and screenshots/videos are automatically generated for failed tests in the `cypress/reports` directory. Configure reporting options in the Cypress configuration file.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`.
+3. Commit your changes: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature/your-feature`.
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
+
+---
+
+**Happy Testing! 🚀**
